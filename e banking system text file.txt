@@ -1,0 +1,243 @@
+﻿eBanking Solution (EBS)
+
+Synopsis
+
+This Software Requirements Specification (SRS) specifies the requirements of the eBanking Solution (EBS), which will be used by the online customers of Federal Bank The eBanking Solution deals with the customers. It would facilitate the customers to perform a wide range of functions over the internet. This would reduce their pains to go to the bank each for each and everything. The Customer would no more be considered as the 'Customer of the Branch' but shall be considered as 'Customer of the Bank with No Geographical Limits'.
+
+User Interface
+
+The first page of EBS would be a login screen which would ask for the username and password of the customer and on successful verification would transfer the user to the main page where the user would be able to see all his/her linked accounts.
+
+The user would then be able to use the different functionalities of the EBS as a menu driven system.
+
+There would be a logout link, pressing which, the user would be logged of the EBS immediately.
+
+Product Functions:
+
+1. LOGIN
+
+DESCRIPTION
+
+This feature would be use by the Customer to Login into the EBS and create an user session. (Login is necessary for accessing the facilities of EBS- Login username and password exist in the DB)
+
+FUNCTIONAL REQUIREMENTS
+
+Purpose
+
+To check the credentials of an user and to prevent any misuse of the product Inputs
+
+The input will be Username and Password combination
+
+Output
+
+The user will be transferred to the main page on successful validation and will be redirected to the Login Page if the validation is unsuccessful.
+
+2. ACCOUNT SUMMARY REPORT
+
+DESCRIPTION
+
+This feature would display all the accounts linked with a customer id.
+
+FUNCTIONAL REQUIREMENTS
+
+Purpose To display all the accounts linked with that cust id...
+Inputs
+
+X
+
+Share
+
+No inputs are needed. Only successful validation of the account is needed, which is done in the
+
+Login step.
+
+Output
+
+The account numbers are displayed as Hyperlinks with Branch Name, Customer name and Available Balance.
+
+3. TRANSACTION DETAILS
+
+DESCRIPTION
+
+This feature would display the transaction details of an account when the Account Number Hyperlink is clicked in the Account Summary page
+
+FUNCTIONAL REQUIREMENTS
+
+Purpose
+
+To display the transactional details of an account
+
+Inputs
+
+The user has to click on the Account Number Hyperlink in the Account Summary page
+
+Output
+
+The transaction details (Sno, Date, Description, Dr/Cr, Transaction Amount )are displayed in a tabular format.
+
+4. FUND TRANSFER
+
+DESCRIPTION
+
+This feature would enable the user to transfer funds to another account linked to his user id or to an account registered as a beneficiary.
+
+FUNCTIONAL REQUIREMENTS
+
+Purpose
+
+To transfer funds to other accounts
+
+Inputs
+
+The Source Account Number, the Destination Account Number, Amount to be Transferred and the Transaction Password are the inputs.
+
+Output
+
+If all the fields are validated successfully, then amount will be transferred successfully or else an error message is displayed.
+
+5. UPDATING USER PROFILE
+
+DESCRIPTION
+
+This feature would enable the user to update his personal profile like telephone number, mobile, email, password etc. (Assumed to be stored in the database)
+
+FUNCTIONAL REQUIREMENTS
+
+Purpose
+
+To update the personal profile of the customer
+
+Inputs Editable Personal info of the customer.
+
+2. Output On validation of the data entered, the profile is updated and a message is displayed.
+
+6. CHANGE USER PASSWORD
+
+DESCRIPTION
+
+This feature would enable the user to update his general password (the one which is used during the Login of EBS)
+
+FUNCTIONAL REQUIREMENTS
+
+Purpose
+
+To change the user login password
+
+Inputs
+
+The Current Password and the New Password (with Confirmation)
+
+Output
+
+On validation of the data entered, the success message is displayed or else an error Message is displayed.
+
+7. CHANGE TRANSACTION PASSWORD
+
+DESCRIPTION
+
+This feature would enable the user to update his Transaction password (the one which is used during the Fund Transfers in the EBS)
+
+FUNCTIONAL REQUIREMENTS
+
+Purpose
+
+To change the user transaction login password Inputs
+
+The Current Transaction Password and the New Password (with Confirmation)
+
+Output
+
+On validation of the data entered, the success message is displayed or else an error message is displayed.
+
+8. VIEW/DOWNLOAD ACCOUNT STATEMENT
+
+DESCRIPTION
+
+This feature allows the customer to view or download the transactions in any of his account linked to the cust id.
+
+FUNCTIONAL REQUIREMENTS
+
+Purpose
+
+To view transactions over a period.
+
+Inputs
+
+Account No (LOV), Period of transaction required (From date, to Date)
+
+Output
+
+On input of the rquired data either the transactions for the period are displayed or can be downloaded depending on the option chosen.
+
+9. ADD A BENEFICIARY
+
+DESCRIPTION
+
+This feature allows the customer to add a new beneficiary.
+
+65
+
+FUNCTIONAL REQUIREMENTS
+
+Purpose
+
+To add a beneficiary to transfer funds.
+
+Inputs
+
+Beneficiary Account No, Account Type, IFSC code, Beneficiary name, Email Id.
+
+Output
+
+Beneficiary is added to the cust ID after a period of 12 hours. An appropriate message to this effect to be displayed.
+
+10. VIEW LIST OF BENEFICIARIES.
+
+DESCRIPTION
+
+This feature allows to list the beneficiaries in a report
+
+FUNCTIONAL REQUIREMENTS
+
+Purpose
+
+To view all beneficiaries linked to the customer id Inputs The user has to click the view list of benficiaries button or sub menu..
+
+Output
+
+Beneficiary Account No, Account Type, IFSC code, Beneficiary name, Email Id, Status (Enabled/ Disabled) in a tabular form.
+
+11.OPEN FIXED DEPOSIT
+
+DESCRIPTION
+
+This feature would enable the user to open a FD account through EBS.
+
+FUNCTIONAL REQUIREMENTS
+
+Purpose To open a new Fixed Deposot account.
+
+Inputs
+
+From Account (LOV of all accounts linked to a cust id), Deposit amount, Nature of Deposit (Monthly interest payout, Quarterly Interest Payout, Reinvetstment of interest), Deposit Period.
+
+Output
+
+On validation of the data entered, the success message is displayed or else an error message is displayed.
+
+12. LOGOUT SYSTEM (EBS)
+
+DESCRIPTION
+
+This feature would enable the user to successfully end his session and Logout of the EBS. After Logging Out, he/she would not be able to perform any of the EBS operations until
+
+he/she is again Logged In.
+
+FUNCTIONAL REQUIREMENTS
+
+Purpose
+
+To successfully end the user session and Logout of the EBS.
+
+Inputs N/A
+Output On successful termination of the session, the Login Page is displayed
